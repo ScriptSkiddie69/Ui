@@ -494,7 +494,7 @@ function library:Watermark(text)
 end
 
 function library:InitNotifications(text, duration, callback)
-    for i,v in next, CoreGuiService:GetChildren() do
+    for i,v in pairs, CoreGuiService:GetChildren() do
         if v.name == "Notifications" then
             v:Destroy()
         end
@@ -675,7 +675,7 @@ function library:InitNotifications(text, duration, callback)
 end
 
 function library:Introduction()
-    for _,v in next, CoreGuiService:GetChildren() do
+    for _,v in pairs, CoreGuiService:GetChildren() do
         if v.Name == "screen" then
             v:Destroy()
         end
@@ -842,7 +842,7 @@ function library:Introduction()
 end
 
 function library:Init(key)
-    for _,v in next, CoreGuiService:GetChildren() do
+    for _,v in pairs, CoreGuiService:GetChildren() do
         if v.Name == "screen" then
             v:Destroy()
         end
@@ -3040,7 +3040,7 @@ function library:Init(key)
                 Amount = #list
                 Val = (Amount * 20) + 20
             end
-            for i,v in next, list do
+            for i,v in pairs, list do
                 local optionButton = Instance.new("TextButton")
 
                 optionButton.Name = "optionButton"
@@ -3059,7 +3059,7 @@ function library:Init(key)
                 end
 
                 optionButton.MouseButton1Click:Connect(function()
-                    for z,x in next, selectorContainer:GetChildren() do
+                    for z,x in pairs, selectorContainer:GetChildren() do
                         if x:IsA("TextButton") then
                             TweenService:Create(x, TweenTable["selector"], {TextColor3 = Color3.fromRGB(160, 160, 160)}):Play()
                         end
@@ -3105,7 +3105,7 @@ function library:Init(key)
                 end
 
                 optionButton.MouseButton1Click:Connect(function()
-                    for z,x in next, selectorContainer:GetChildren() do
+                    for z,x in pairs, selectorContainer:GetChildren() do
                         if x:IsA("TextButton") then
                             TweenService:Create(x, TweenTable["selector"], {TextColor3 = Color3.fromRGB(140, 140, 140)}):Play()
                         end
